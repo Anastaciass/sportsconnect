@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportsConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#dbb6ee">
+
+</head>
+<body>
+  <div class="container">
+      <button id="openAppBtn" class="open-app-btn" data-url="/login">Open App</button>
+      <div class="glass-card-with-hole">
+        <div class="glass-content">
+          <div class="powered-by">Powered by</div>
+          <h1 class="logo">SportsConnect</h1>
+          <div class="date">spring 2025</div>
+          <div class="tagline">Train. Compete. Connect.</div>
+          <div class="subtitle">Inspired by athletes</div>
+        </div>
+      </div>
+    </div>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const btn = document.getElementById("openAppBtn");
+
+        btn.addEventListener("click", function () {
+        const targetUrl = btn.getAttribute("data-url");  // <-- happens when button is clicked
+        window.location.href = targetUrl;
+      });
+    });
+      </script>
+
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("/service-worker.js")
+        .then(reg => console.log("✅ Service Worker registered", reg))
+        .catch(err => console.error("❌ SW registration failed:", err));
+    });
+  }
+</script>
+
+      
+      
+</body>
+</html>

@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('../icons/finaldesign.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+.glass-card-with-hole {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+    height: 500px;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    padding: 160px 20px 30px 20px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none; 
+
+    /* mask for the ring */
+    -webkit-mask-image: radial-gradient(circle 110px at center 120px, transparent 110px, black 101px);
+mask-image: radial-gradient(circle 110px at center 120px, transparent 100px, black 101px);
+
+  }
+  
+  .glass-content {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 30%;
+    pointer-events: auto;
+  }  
+
+
+.powered-by {
+    margin-top: 7%;
+    font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.logo {
+    margin-top: -5%;
+    font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.date {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.tagline {
+    margin-top: -5%;
+    font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+}
+
+.subtitle {
+    margin-top: 8%;
+    font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    opacity: 0.75;
+}
+
+.open-app-btn {
+    margin-top: 360px;
+    padding: 12px 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #8B1F2F;
+    text-decoration: none;
+    position: absolute;
+    z-index: 10;
+    pointer-events: all;
+}
+
+.open-app-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+    
+}
+
+.login-container {
+    width: 100%;
+    max-width: 390px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 340px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border-radius: 40px;
+    padding: 40px 24px;
+    text-align: center;
+}
+
+.welcome-text {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    line-height: 1.2;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.input-group {
+    position: relative;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.login-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.login-form input:focus {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 16px;
+    background: #8B1F2F;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-link {
+    color: #22A69E !important;
+}
+.signup-link a {
+    color: #22A69E !important;
+}
+
+.login-btn:hover {
+    background: #9f2436;
+}
+
+.signup-link {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.signup-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 16px;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+}
+
+
+.login-form input {
+    width: 100%;
+    padding: 16px 16px 16px 48px; 
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+
+/* Responsivnes */
+@media (max-width: 380px) {
+    .login-card {
+        max-width: 300px;
+        padding: 30px 20px;
+    }
+
+    .welcome-text {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-height: 600px) {
+    .login-container {
+        padding: 15px;
+    }
+
+    .login-card {
+        padding: 25px 20px;
+    }
+
+    .welcome-text {
+        margin-bottom: 25px;
+    }
+
+    .login-form {
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 280px) {
+    .login-card {
+        max-width: 260px;
+        padding: 25px 15px;
+    }
+
+    .welcome-text {
+        font-size: 24px;
+    }
+
+    .login-form input, .login-btn {
+        padding: 14px;
+        font-size: 15px;
+    }
+}

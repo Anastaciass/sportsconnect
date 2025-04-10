@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile - SportsConnect</title>
+
+  <!-- Шрифт и иконки -->
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@24,400,0..1" rel="stylesheet" />
+
+  <!-- Стили -->
+  <link rel="stylesheet" href="../static/css/my.css" />
+</head>
+<body>
+
+  <div class="myworkouts-container">
+    <div class="header-bar">
+      <h1 class="myworkouts-header">Profile</h1>
+    </div>
+
+    <div class="profile-content">
+      <div class="profile-picture"></div>
+      <h2 class="profile-name">User</h2>
+      <p class="profile-email">user@gmail.com</p>
+
+      <div class="profile-stats">
+        <div class="stat">
+          <p class="stat-number">27</p>
+          <p class="stat-label">joined</p>
+        </div>
+        <div class="stat">
+          <p class="stat-number">165</p>
+          <p class="stat-label">likes</p>
+        </div>
+      </div>
+      <form action="/logout" method="POST">
+        <button type="submit" class="logout-btn">Logout</button>
+      </form>      
+    </div>
+  </div>
+
+  <!-- Навигация -->
+<nav class="nav-bar">
+  <a href="/menu" class="nav-icon" data-page="menu">
+    <span class="material-symbols-outlined">find_in_page</span>
+  </a>
+  <a href="/myworkouts" class="nav-icon" data-page="myworkouts">
+    <span class="material-symbols-outlined">fact_check</span>
+  </a>
+  <a href="/profile" class="nav-icon" data-page="profile">
+    <span class="material-symbols-outlined">account_circle</span>
+  </a>
+</nav>
+
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const path = window.location.pathname.split('/')[1]; // например "profile"
+      const navLinks = document.querySelectorAll('.nav-icon');
+  
+      navLinks.forEach(link => {
+        if (link.dataset.page === path || (path === '' && link.dataset.page === 'menu')) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+    
+  
+
+</body>
+</html>

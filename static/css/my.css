@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Instrument Sans', sans-serif;
+  }
+  
+  body {
+    background-color: #fdfdfd;
+    color: #3a3a3a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .myworkouts-container {
+    flex: 1;
+    padding-bottom: 80px; 
+  }
+  
+  .myworkouts-header {
+    background-color: #3d7b75;
+    color: white;
+    padding: 16px;
+    font-size: 33px;
+    font-weight: 600;
+    text-align: left;
+  }
+  
+  .empty-state {
+    text-align: center;
+    padding: 60px 16px;
+  }
+  
+  .empty-icon {
+    font-size: 60px;
+    color: #8b1f2f;
+    margin-bottom: 12px;
+  }
+  
+  .empty-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #8b1f2f;
+  }
+  
+  .empty-text {
+    font-size: 14px;
+    color: #c64b4b;
+  }
+  
+  /* Навигация */
+  .nav-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: #F8F4F2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #444;
+  }
+  
+  .nav-bar .material-symbols-outlined {
+    color: #22A69E;
+    font-size: 40px;
+  }
+  .my-icon {
+    font-size: 120px;         
+    color: #822820;           
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+
+.profile-container {
+  padding-bottom: 40px; 
+}
+
+.header-bar {
+  background-color: #3C7D76;
+  font-size: 33px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px;
+}
+
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-image: url("../images/face_24dp_22A69E_FILL0_wght400_GRAD0_opsz24.svg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 2%;
+}
+
+.profile-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #8B1F2F;
+  margin-bottom: 4px;
+}
+
+.profile-email {
+  font-size: 14px;
+  color: #B93D3D;
+  margin-bottom: 24px;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1F706C;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #777;
+}
+
+
+.logout-btn {
+  padding: 12px 32px;
+  background-color: #8B1F2F;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #9f2436;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  font-size: 28px;
+  transition: font-variation-settings 0.6s ease;
+  color: #22A69E;
+}
+
+.nav-icon.active .material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  color: #22A69E; 
+}
+.big-icon {
+  font-size: 80px;
+  color: #8B1F2F; 
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.workouts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  padding: 24px;
+}
+
+.workout-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.workout-card:hover {
+  transform: translateY(-4px);
+}
+
+.workout-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.workout-info {
+  padding: 16px;
+}
+
+.workout-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #3C7D76;
+  margin-bottom: 6px;
+}
+
+.coach {
+  font-size: 14px;
+  color: #999;
+}
+
+.joined-btn {
+  margin-top: 12px;
+  background-color: #3d7b75;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: default;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .workouts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+  

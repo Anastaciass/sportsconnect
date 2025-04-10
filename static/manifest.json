@@ -1,0 +1,21 @@
+{
+    "name": "SportsConnect",
+    "short_name": "SCN",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#b57edc",
+    "theme_color": "#dbb6ee",
+    "icons": [
+      {
+        "src": "/static/icons/SCN (2).png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/static/icons/SPORTS (15).png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu - SportsConnect</title>
+
+  <!-- Шрифт и иконки -->
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@24,400,0..1" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+
+
+  <link rel="stylesheet" href="../static/css/other.css" />
+</head>
+<body>
+  <div class="menu-container">
+
+    <div class="video-header">
+      <video autoplay muted loop class="header-video">
+        <source src="../static/video/3191898-Uhd 3840 2160 25Fps(1).mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <h1 class="video-title">BECOME<br>UNSTOPPABLE</h1>
+    </div>
+
+    <div class="marquee-container">
+        <div class="marquee-track">
+          <span class="marquee-text">Join our workouts!</span>
+          <span class="marquee-text">Join our workouts!</span>
+          <span class="marquee-text">Join our workouts!</span>
+          <span class="marquee-text">Join our workouts!</span>
+          <span class="marquee-text">Join our workouts!</span>
+          <span class="marquee-text">Join our workouts!</span>
+        </div>
+      </div>
+      
+    <div class="workouts">
+      <div class="workout-card">
+        <img src="../static/images/Nude Günlüğü (Yarı Texting).jfif" alt="Workout" />
+        <div class="workout-info">
+            <div class="workout-text">
+              <p class="workout-title">Evening Stretching</p>
+              <span class="coach">by Sarah Johnson</span>
+            </div>
+            <div class="icons">
+              <span class="material-icons like-icon"
+                  data-user-id="{{ user_id }}"
+                  data-workout-id="1">
+                {% if 1 in liked_workouts %}favorite{% else %}favorite_border{% endif %}
+              </span>
+
+              <span class="material-icons comment-icon"
+                    data-user-id="{{ user_id }}"
+                    data-workout-id="1">
+                chat_bubble_outline
+            </span>
+            </div>
+          </div>
+        <button class="join-btn">Join workout</button>
+      </div>
+
+      <div class="workout-card">
+        <img src="../static/images/30 Yoga Photography Tips and Ideas.jfif" alt="Workout" />
+        <div class="workout-info">
+          <p class="workout-title">Retreat Yoga</p>
+          <span class="coach">by Alina Korolko</span>
+          <div class="icons">
+            <span class="material-icons like-icon"
+                  data-user-id="{{ user_id }}"
+                  data-workout-id="2">
+              {% if 2 in liked_workouts %}favorite{% else %}favorite_border{% endif %}
+            </span>
+
+            <span class="material-icons comment-icon"
+                    data-user-id="{{ user_id }}"
+                    data-workout-id="2">
+                chat_bubble_outline
+            </span>
+          </div>
+        </div>
+        <button class="join-btn">Join workout</button>
+      </div>
+      <div class="workout-card">
+        <img src="../static/images/Dance heels.jfif" alt="Workout" />
+        <div class="workout-info">
+          <p class="workout-title">Heels Dance</p>
+          <span class="coach">by Juliana Honor</span>
+          <div class="icons">
+            <span class="material-icons like-icon"
+                  data-user-id="{{ user_id }}"
+                  data-workout-id="3">
+              {% if 3 in liked_workouts %}favorite{% else %}favorite_border{% endif %}
+            </span>
+
+            <span class="material-icons comment-icon"
+                    data-user-id="{{ user_id }}"
+                    data-workout-id="3">
+                chat_bubble_outline
+            </span>
+          </div>
+        </div>
+        <button class="join-btn">Join workout</button>
+      </div>
+      <div class="workout-card">
+        <img src="../static/images/Kickboxing Gear Women _ Aesthetic _ Gloves _ Hand Wraps _ Shin Guards.jfif" alt="Workout" />
+        <div class="workout-info">
+          <p class="workout-title">Kick Boxing</p>
+          <span class="coach">by Mike Leuise</span>
+          <div class="icons">
+            <span class="material-icons like-icon"
+                  data-user-id="{{ user_id }}"
+                  data-workout-id="4">
+              {% if 4 in liked_workouts %}favorite{% else %}favorite_border{% endif %}
+            </span>
+
+            <span class="material-icons comment-icon"
+                    data-user-id="{{ user_id }}"
+                    data-workout-id="4">
+                chat_bubble_outline
+            </span>
+          </div>
+        </div>
+        <button class="join-btn">Join workout</button>
+      </div>
+      <div class="workout-card">
+        <img src="../static/images/victor-freitas-1.jfif" alt="Workout" />
+        <div class="workout-info">
+          <p class="workout-title">HIIT Combo Blast</p>
+          <span class="coach">by John Smith</span>
+          <div class="icons">
+            <span class="material-icons like-icon"
+                  data-user-id="{{ user_id }}"
+                  data-workout-id="5">
+              {% if 5 in liked_workouts %}favorite{% else %}favorite_border{% endif %}
+            </span>
+
+            <span class="material-icons comment-icon"
+                    data-user-id="{{ user_id }}"
+                    data-workout-id="5">
+                chat_bubble_outline
+            </span>
+          </div>
+        </div>
+        <button class="join-btn">Join workout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- navigation -->
+  <nav class="nav-bar">
+    <a href="/menu" class="nav-icon" data-page="menu">
+      <span class="material-symbols-outlined">find_in_page</span>
+    </a>
+    <a href="/myworkouts" class="nav-icon" data-page="myworkouts">
+      <span class="material-symbols-outlined">fact_check</span>
+    </a>
+    <a href="/profile" class="nav-icon" data-page="profile">
+      <span class="material-symbols-outlined">account_circle</span>
+    </a>
+  </nav>
+
+  <!-- comments (window) -->
+<div id="comment-modal" class="modal hidden">
+  <div class="modal-content">
+    <h2>Comments</h2>
+    <button id="write-btn">Write Comment</button>
+    <button id="read-btn">Read Comments</button>
+
+    <div id="write-section" class="hidden">
+      <textarea id="comment-text" placeholder="Write your comment..."></textarea>
+      <button id="submit-comment">Submit</button>
+    </div>
+
+    <div id="comments-list" class="hidden">
+      <ul id="comments-container"></ul>
+    </div><br>
+
+    <button id="close-modal">Close</button>
+  </div>
+</div>
+
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const likeIcons = document.querySelectorAll(".like-icon");
+
+    likeIcons.forEach(icon => {
+      icon.addEventListener("click", function () {
+        const userId = this.getAttribute("data-user-id");
+        const workoutId = this.getAttribute("data-workout-id");
+
+        fetch("/toggle_like", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ user_id: userId, workout_id: workoutId })
+        })
+        .then(res => res.json())
+        .then(data => {
+          if (data.liked) {
+            this.innerText = "favorite";
+            this.style.color = "#F03F30";
+          } else {
+            this.innerText = "favorite_border";
+            this.style.color = "#22A69E";
+          }
+        })
+        .catch(err => {
+          console.error("Error:", err);
+        });
+      });
+    });
+  });
+</script>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const video = document.querySelector('.header-video');
+  
+      // Первый запуск
+      video.classList.remove('centered');
+      setTimeout(() => {
+        video.classList.add('centered');
+      }, 5000);
+  
+      // Повтор при каждом новом цикле видео
+      video.addEventListener('timeupdate', () => {
+        if (video.currentTime < 0.3 && video.classList.contains('centered')) {
+          video.classList.remove('centered');
+          setTimeout(() => {
+            video.classList.add('centered');
+          }, 5000);
+        }
+      });
+    });
+  </script>
+  
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const path = window.location.pathname.split('/')[1]; // например "profile"
+      const navLinks = document.querySelectorAll('.nav-icon');
+  
+      navLinks.forEach(link => {
+        if (link.dataset.page === path || (path === '' && link.dataset.page === 'menu')) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+<script>
+  let currentWorkoutId = null;
+  const modal = document.getElementById("comment-modal");
+  const writeBtn = document.getElementById("write-btn");
+  const readBtn = document.getElementById("read-btn");
+  const writeSection = document.getElementById("write-section");
+  const commentsList = document.getElementById("comments-list");
+  const commentBox = document.getElementById("comment-text");
+  const submitComment = document.getElementById("submit-comment");
+  const closeModal = document.getElementById("close-modal");
+  const commentsContainer = document.getElementById("comments-container");
+
+  document.querySelectorAll(".material-icons").forEach(icon => {
+    if (icon.innerText === "chat_bubble_outline") {
+      icon.addEventListener("click", () => {
+        currentWorkoutId = icon.getAttribute("data-workout-id");
+        modal.classList.remove("hidden");
+      });
+    }
+  });
+
+  writeBtn.onclick = () => {
+    writeSection.classList.remove("hidden");
+    commentsList.classList.add("hidden");
+  };  
+
+  readBtn.onclick = () => {
+  writeSection.classList.add("hidden");
+  commentsList.classList.remove("hidden");
+
+  fetch(`/get_comments/${currentWorkoutId}`)
+    .then(res => res.json())
+    .then(data => {
+      commentsContainer.innerHTML = "";
+      if (data.comments.length === 0) {
+        commentsContainer.innerHTML = `<li class="no-comments">🙀 No comments yet 🐾</li>`;
+      } else {
+        data.comments.forEach(comment => {
+          const li = document.createElement("li");
+          li.textContent = comment.content;
+          commentsContainer.appendChild(li);
+        });
+      }
+    });
+};
+
+  submitComment.onclick = () => {
+    const userId = 1; 
+    fetch("/add_comment", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        user_id: userId,
+        workout_id: currentWorkoutId,
+        content: commentBox.value
+      })
+    }).then(() => {
+      commentBox.value = "";
+      alert("Comment posted!");
+    });
+  };
+
+  closeModal.onclick = () => {
+    modal.classList.add("hidden");
+    commentBox.value = "";
+    writeSection.classList.add("hidden");
+    commentsList.classList.add("hidden");
+  };
+</script>
+
+<script>
+  document.querySelectorAll(".join-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      const card = button.closest(".workout-card");
+      const userId = card.querySelector(".like-icon").getAttribute("data-user-id");
+      const workoutId = card.querySelector(".like-icon").getAttribute("data-workout-id");
+
+      fetch("/join_workout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ user_id: userId, workout_id: workoutId })
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          alert("Workout joined!");
+        }
+      })
+      .catch(err => {
+        console.error("Error joining workout:", err);
+      });
+    });
+  });
+</script>
+
+  
+</body>
+</html>

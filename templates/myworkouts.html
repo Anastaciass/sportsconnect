@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Workouts</title>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@24,400,0..1" rel="stylesheet" />
+
+
+
+  <link rel="stylesheet" href="../static/css/my.css" />
+</head>
+<body>
+  <div class="myworkouts-container">
+    <header class="myworkouts-header">My Workouts</header>
+    {% if workouts %}
+    <div class="workouts">
+      {% for workout in workouts %}
+        <div class="workout-card">
+          <img src="{{ workout.workoutPicURL or '../static/images/default.jpg' }}" alt="Workout" />
+          <div class="workout-info">
+            <p class="workout-title">{{ workout.name }}</p>
+            <span class="coach">by {{ workout.coach }}</span>
+            <button class="joined-btn" disabled>✔ Joined!</button>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% else %}
+      <div class="empty-state">
+        <span class="material-symbols-outlined big-icon">fact_check</span>
+        <h2 class="empty-title">No Workouts Yet</h2>
+        <p class="empty-text">Join workouts to see them here</p>
+      </div>
+    {% endif %}
+  </div>
+
+
+
+  <nav class="nav-bar">
+    <a href="/menu" class="nav-icon" data-page="menu">
+      <span class="material-symbols-outlined">find_in_page</span>
+    </a>
+    <a href="/myworkouts" class="nav-icon" data-page="myworkouts">
+      <span class="material-symbols-outlined">fact_check</span>
+    </a>
+    <a href="/profile" class="nav-icon" data-page="profile">
+      <span class="material-symbols-outlined">account_circle</span>
+    </a>
+  </nav>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const path = window.location.pathname.split('/')[1]; 
+      const navLinks = document.querySelectorAll('.nav-icon');
+  
+      navLinks.forEach(link => {
+        if (link.dataset.page === path || (path === '' && link.dataset.page === 'menu')) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+    
+</body>
+</html>
